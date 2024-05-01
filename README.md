@@ -1,5 +1,5 @@
 <div align="center">
-	<h1><b><i>IndicXlit</i></b></h1>
+	<h1><b><i>IndicXlit-fast</i></b></h1>
 	<a href="https://ai4bharat.iitm.ac.in/areas/transliteration/">Website</a> |
 	<a href="#download-indicxlit-model">Downloads</a> |
 	<a href="https://arxiv.org/abs/2205.03018">Paper</a> |
@@ -10,7 +10,12 @@
 </div>
 
 <!-- description about IndicXlit -->
-
+Changes have been made to a forked branch in order to transliterate large datasets more efficiently. 
+As transliteration works on a word-by-word basis, it is not efficient to repeatedly transliterate the same words within the dataset. Therefore, the following changes have been implemented:
+1. Transliteration caching
+2. Batch processing
+3. Usage examples.
+---
 ***[IndicXlit](https://indicnlp.ai4bharat.org/indic-xlit)*** is a transformer-based multilingual transliteration model (~11M) that ***supports 21 Indic languages*** for Roman to native script and native to Roman script conversions. It is trained on ***[Aksharantar](https://indicnlp.ai4bharat.org/aksharantar/)*** dataset which is the ***largest publicly available parallel corpus containing 26 million word pairs spanning 20 Indic languages*** at the time of writing (5 May 2022). It supports the following 21 Indic languages:
 
 <!-- list of languages IndicXlit supports -->
