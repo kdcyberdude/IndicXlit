@@ -34,7 +34,7 @@ class XlitEngineTransformer_Indic2En(BaseEngineTransformer):
 
     TODO: Ability to pass `beam_width` dynamically
     """
-    def __init__(self, beam_width=4, rescore=True):
+    def __init__(self, beam_width=4, rescore=True, batch_size=32):
         if is_directory_writable(F_DIR):
             models_path = os.path.join(F_DIR, 'models')
         else:
@@ -57,7 +57,7 @@ class XlitEngineTransformer_Indic2En(BaseEngineTransformer):
         else:
             dicts_folder = None
         
-        super().__init__(models_path, beam_width=beam_width, rescore=rescore)
+        super().__init__(models_path, beam_width=beam_width, rescore=rescore, batch_size= batch_size)
     
     @property
     def all_supported_langs(self):

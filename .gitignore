@@ -132,3 +132,4 @@ dmypy.json
 
 *.pt
 *.zip
+transliterated_words_map.json
